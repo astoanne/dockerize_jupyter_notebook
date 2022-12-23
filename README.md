@@ -40,11 +40,9 @@ There are several jupyter-notebook-related base images.
 Since our notebook uses **pandas**, **numpy**, **ktrain**(uses **keras** which runs on top of **tensorflow**),
 **tensorflow-notebook** will be our choice, since it includes everything in **jupyter/scipy-notebook**(which has **pandas**, **numpy** included).
 
+[Docker Stacks](http://www.affective-sciences.org/index.php/download_file/view/395/296/)
 
 ![image](https://user-images.githubusercontent.com/34805810/209347176-bcae691c-d366-40f4-afea-bfb7553a117e.png)
-
-
-[Docker Stacks](http://www.affective-sciences.org/index.php/download_file/view/395/296/)
 
 
 ## Create an Empty requirements.txt File (update later)
@@ -85,6 +83,7 @@ $ docker images
 
 
 ## Run the Image
+Running with admin priviledges:
 
 ```
 $ docker run -it -p 8888:8888 textemotionotebook
@@ -94,7 +93,6 @@ $ docker run -it -p 8888:8888 textemotionotebook
 
 Use the last link, e.g. http://127.0.0.1:8888/lab?token=...
 
-Remember to run with admin priviledges.
 
 ![image](https://user-images.githubusercontent.com/34805810/209349859-ba68532d-3641-4c16-9848-6f7a30ce5573.png)
 
