@@ -1,4 +1,5 @@
-# Dockerize a Jupyter Notebook File(Windows) 項目的開發及部署詳細說明
+# Dockerize a Jupyter Notebook File(Windows) 
+項目的開發及部署詳細說明
 
 ### Notebook Used:
 #### Emotion Classification in Short Messages
@@ -164,7 +165,8 @@ $ docker run -it -p 8888:8888 astolo/textemotionotebook:first
 Use the bottom link, the notebook should run successfully.
 
 
-# To Verify My Assignment 項目的使用指南
+# To Verify My Assignment 
+項目的使用指南
 
 Running as administrator in Powershell:
 ```
