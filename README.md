@@ -171,7 +171,7 @@ Running as administrator in Powershell:
 $ docker pull astolo/textemotionotebook:first
 $ docker run -it -p 8888:8888 astolo/textemotionotebook:first
 ```
-Use the bottom link, http://127.0.0.1:8888/lab?token=...
+Use the bottom link, e.g.http://127.0.0.1:8888/lab?token=...
 
 
 
