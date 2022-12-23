@@ -175,3 +175,11 @@ If you are not ready to wait for 10 hours to retrain the model, start from tag "
 I first used an audio-related notebook, which improvises a pieze of jazz music. Later I found out that it was not trivial to play audio inside docker after going through a large number of tutorials trying to find a way to listen to my generated midi music file inside docker. 
 
 I also tried to shrink the size of my image by using more than one dockerfile and seperating the build and package stage, or using docker-compose but soon made the file looks pretty ugly and unreadable, which I believe was not the intension of this assignment: to dockerize a simple application. Plus most tutorials focus on nodejs or c or java based projects which are more natural to break down into stages compared to jupyter-notebook projects. 
+
+### Side Notes
+If you are to ```git clone``` this repo, the notebook has to run from the top. Because there is a size limitation for github, I was unable to upload the ```.h5``` file, but if you
+```
+$ docker pull astolo/textemotionotebook:first
+$ docker run -it -p 8888:8888 astolo/textemotionotebook:first
+```
+there should not be a problem running from the tag "RUN FROM HERE".
