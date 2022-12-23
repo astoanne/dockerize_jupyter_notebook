@@ -175,7 +175,7 @@ Use the bottom link, e.g.http://127.0.0.1:8888/lab?token=...
 
 
 
-If you are not ready to wait for 10 hours to retrain the model, start from tag "RUN FROM HERE" in the notebook.
+If you are not ready to wait for 10 hours to retrain the model, start from tag "RUN FROM HERE" in the notebook and use the pretrained model.
 
 # Other Works I Did
 
