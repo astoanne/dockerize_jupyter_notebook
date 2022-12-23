@@ -94,6 +94,7 @@ $ docker run -it -p 8888:8888 textemotionotebook
 
 Use the last link, e.g. http://127.0.0.1:8888/lab?token=...
 
+Remember to run with admin priviledges.
 
 ![image](https://user-images.githubusercontent.com/34805810/209349859-ba68532d-3641-4c16-9848-6f7a30ce5573.png)
 
@@ -157,18 +158,21 @@ $ docker pull astolo/textemotionotebook:first
 $ docker run -it -p 8888:8888 astolo/textemotionotebook:first
 ```
 
-Use the bottom link, the notebook should run successfully.
+Use the bottom link, the notebook should run successfully. Remember to run as administrator.
 
 
 # To Verify My Assignment
 
+Running as administrator in Powershell:
 ```
 $ docker pull astolo/textemotionotebook:first
 $ docker run -it -p 8888:8888 astolo/textemotionotebook:first
 ```
 Use the bottom link, http://127.0.0.1:8888/lab?token=...
 
-If you are not ready to wait for 10 hours to retrain the model, start from tag "RUN FROM HERE" in the notebook
+
+
+If you are not ready to wait for 10 hours to retrain the model, start from tag "RUN FROM HERE" in the notebook.
 
 # Other Works I Did
 
