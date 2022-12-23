@@ -14,7 +14,7 @@ Usage:
 ## Run the Notebook Locally
 
 Make sure the code can run normally in local environment.
-Take notes on the libraries it uses, for my case：**pandas**, **numpy**, **ktrain** which uses **keras** 
+Take notes on the libraries it uses, for my case：**pandas**, **numpy**, **ktrain** which uses **keras**.
 
 ![image](https://user-images.githubusercontent.com/34805810/209344421-700b5010-5c92-4a6d-a82f-2d13ee5c7876.png)
 
@@ -53,7 +53,7 @@ $ touch requirements.txt
 
 ## Writing Dockerfile
 
-In the same folder of our notebook, we create our Dockerfile
+In the same folder of our notebook, we create our Dockerfile:
 
 ```
 FROM jupyter/tensorflow-notebook
@@ -64,7 +64,7 @@ COPY bert_model ./bert_model
 RUN pip install -r requirements.txt
 ```
 
-which uses the base image, and copies all files into our container
+which uses the base image, and copies all files into our container.
 
 
 ## Build the Dockerfile
@@ -102,15 +102,19 @@ Use the last link, e.g. http://127.0.0.1:8888/lab?token=...
 
 ## Run the notebook
 
-There should be warning suggesting the missing library: **ktrain**
+There should be warning suggesting the missing library: **ktrain**.
 
 ## Update the Requirements File
 
 Update requirements.txt to include the the required library
 ```
+ktrain==0.32.3
+```
+Or simply,
+```
 ktrain
 ```
-After rebuilding the docker and rerunning the image, the notebook can be run successfully
+And let docker resolves the version itself. After rebuilding the docker and rerunning the image, the notebook can be run successfully.
 
 ![image](https://user-images.githubusercontent.com/34805810/209394073-31d45d8c-b185-4972-be09-01118c691c21.png)
 
