@@ -114,7 +114,7 @@ Or simply,
 ```
 ktrain
 ```
-And let docker decides the version itself. After rebuilding the docker and rerunning the image, the notebook can be run successfully.
+After rebuilding the docker and rerunning the image, the notebook can be run successfully.
 
 ![image](https://user-images.githubusercontent.com/34805810/209394073-31d45d8c-b185-4972-be09-01118c691c21.png)
 
