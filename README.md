@@ -80,7 +80,8 @@ $ docker build -t textemotionotebook .
 ```
 $ docker images
 ```
-![image](https://user-images.githubusercontent.com/34805810/209349393-34fe95ee-3ed2-4404-936f-a1e39da91e94.png)
+
+![image](https://user-images.githubusercontent.com/34805810/209350876-1f78baeb-fe00-4162-905c-c495f8d6b7ae.png)
 
 
 ## Run the Image
@@ -104,8 +105,12 @@ image here
 
 There should be warning suggesting the missing library: **ktrain**
 
-## Update the Requirements File to Include the Packages Needed
+## Update the Requirements File
 
+Update requirements.txt to include the the required library
+```
+ktrain
+```
 After rebuilding the docker and rerunning the image, the notebook can be run successfully
 
 image here
