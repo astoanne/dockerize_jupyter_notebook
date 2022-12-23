@@ -14,7 +14,7 @@ Usage:
 ## Run the Notebook Locally
 
 Make sure the code can run normally in local environment.
-Take notes on the libraries it uses, for my case：*pandas*, *numpy*, "ktrain* which uses keras 
+Take notes on the libraries it uses, for my case：**pandas**, **numpy**, **ktrain** which uses **keras** 
 
 ![image](https://user-images.githubusercontent.com/34805810/209344421-700b5010-5c92-4a6d-a82f-2d13ee5c7876.png)
 
@@ -34,18 +34,20 @@ $ docker version
 ![image](https://user-images.githubusercontent.com/34805810/209346454-51a04082-64b2-44c0-a83c-dce0203a32f6.png)
 
 
-It should display something like this👆
-
 ## Decide Base Image
 
 There are several jupyter-notebook-related base images. 
-Since our notebook uses *pandas*, *numpy*, "ktrain*(uses keras which runs on top of tensorflow),
-*tensorflow-notebook* will be our choice, since it includes everything in jupyter/scipy-notebook(which has *pandas*, *numpy* included).
+Since our notebook uses **pandas**, **numpy**, **ktrain**(uses **keras** which runs on top of **tensorflow**),
+**tensorflow-notebook** will be our choice, since it includes everything in **jupyter/scipy-notebook**(which has **pandas**, **numpy** included).
 
 
 ![image](https://user-images.githubusercontent.com/34805810/209347176-bcae691c-d366-40f4-afea-bfb7553a117e.png)
 
-## Create an empty requirements.txt File (update later)
+
+[Docker Stacks](http://www.affective-sciences.org/index.php/download_file/view/395/296/)
+
+
+## Create an Empty requirements.txt File (update later)
 
 ```
 $ touch requirements.txt
@@ -100,15 +102,15 @@ image here
 
 ## Run the notebook
 
-There should be warning suggesting the missing library: *ktrain*
+There should be warning suggesting the missing library: **ktrain**
 
-## Update the Requirements File to Include the Package Needed
+## Update the Requirements File to Include the Packages Needed
 
 After rebuilding the docker and rerunning the image, the notebook can be run successfully
 
 image here
 
-## Push to DockerHub
+## Getting Image ID
 
 First find the image ID by running ``` docker images ```
 
@@ -120,7 +122,7 @@ First find the image ID by running ``` docker images ```
 $ docker tag d3e2d3a63640 astolo/textemotionotebook:first
 ```
 
-## Push the Image
+## Push the Image to DockerHub
 
 ```
 $ docker push astolo/textemotionotebook:first
@@ -146,10 +148,21 @@ $ docker pull astolo/textemotionotebook:first
 $ docker run -it -p 8888:8888 astolo/textemotionotebook:first
 ```
 
-Use the bottom link, you should see the notebook and run it successfully.
-
-[Docker Stacks](http://www.affective-sciences.org/index.php/download_file/view/395/296/)
+Use the bottom link, the notebook should run successfully.
 
 
+# To Verify My Assignment
 
+```
+$ docker pull astolo/textemotionotebook:first
+$ docker run -it -p 8888:8888 astolo/textemotionotebook:first
+```
+Use the bottom link, http://127.0.0.1:8888/lab?token=...
 
+If you are not ready to wait for 10 hours to retrain the model, start from tag "RUN FROM HERE" in the notebook
+
+# Other Works I Did
+
+I first used an audio-related notebook, which improvises a pieze of jazz music. Later I found out that it was not trivial to play audio inside docker after going through a large number of tutorials trying to find a way to display my generated midi music file. 
+
+I also tried to shrink the size of my image by using more than one dockerfile and seperating the build and package stage, or using docker-compose but soon made the file looks pretty ugly and unreadable, which I believe was not the intension of this assignment: to dockerize a simple application. Plus most tutorials focus on nodejs or c or java based projects which are more natural to break down into stages compared to jupyter-notebook projects. 
