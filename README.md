@@ -137,10 +137,10 @@ $ docker push astolo/textemotionotebook:first
 ```
 
 
-[DockerHub](https://hub.docker.com/repository/docker/astolo/textemotionotebook)
 
-Should be able to see the image in *My Profile*
 
+Should be able to see the image in  [DockerHub](https://hub.docker.com/repository/docker/astolo/textemotionotebook)
+'s *My Profile*
 
 ![image](https://user-images.githubusercontent.com/34805810/209345543-095f8423-533a-4d21-b6e6-d13526be69d6.png)
 
@@ -151,12 +151,13 @@ $ docker pull astolo/textemotionotebook:first
 ```
 
 ## Run the Image
+Running as administrator:
 
 ```
 $ docker run -it -p 8888:8888 astolo/textemotionotebook:first
 ```
 
-Use the bottom link, the notebook should run successfully. Remember to run as administrator.
+Use the bottom link, the notebook should run successfully.
 
 
 # To Verify My Assignment
