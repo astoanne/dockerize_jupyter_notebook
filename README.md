@@ -99,7 +99,7 @@ Use the last link, e.g. http://127.0.0.1:8888/lab?token=...
 
 ## Notebook Opened in Docker
 
-image here
+![image](https://user-images.githubusercontent.com/34805810/209393808-a5979705-5465-4f2c-a0ec-8de6991934e0.png)
 
 ## Run the notebook
 
@@ -113,7 +113,11 @@ ktrain
 ```
 After rebuilding the docker and rerunning the image, the notebook can be run successfully
 
-image here
+![image](https://user-images.githubusercontent.com/34805810/209394073-31d45d8c-b185-4972-be09-01118c691c21.png)
+
+
+![image](https://user-images.githubusercontent.com/34805810/209393944-0047b046-a036-4056-a637-ab7169c736fb.png)
+
 
 ## Getting Image ID
 
